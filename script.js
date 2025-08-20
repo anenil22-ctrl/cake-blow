@@ -65,7 +65,11 @@ document.addEventListener("DOMContentLoaded", function () {
       updateCandleCount();
     }
   }
-
+    const CANDLE_COUNT = 25;
+  for (let i = 0; i < CANDLE_COUNT; i++) {
+    const left = 50 + i * 20;   
+    const top = 80;             
+    addCandle(left, top);
   if (navigator.mediaDevices.getUserMedia) {
     navigator.mediaDevices
       .getUserMedia({ audio: true })
