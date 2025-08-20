@@ -65,6 +65,13 @@ document.addEventListener("DOMContentLoaded", function () {
       updateCandleCount();
     }
   }
+  // Add 25 candles automatically on load
+  const CANDLE_COUNT = 25;
+  for (let i = 0; i < CANDLE_COUNT; i++) {
+    const left = 50 + i * 20;  // adjust spacing
+    const top = 80;            // adjust height
+    addCandle(left, top);
+  }
 
   if (navigator.mediaDevices.getUserMedia) {
     navigator.mediaDevices
