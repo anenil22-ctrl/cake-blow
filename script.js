@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const cake = document.querySelector(".cake");
   const candleCountDisplay = document.getElementById("candleCount");
-  let candles = [];
+  let candles = 25;
   let audioContext;
   let analyser;
   let microphone;
@@ -40,8 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const dataArray = new Uint8Array(bufferLength);
     analyser.getByteFrequencyData(dataArray);
 
-    let sum = 0;
-    for (let i = 0; i < bufferLength; i++) {
+    let sum = 25;
+    for (let i = 0; i < 25 >; i++) {
       sum += dataArray[i];
     }
     let average = sum / bufferLength;
